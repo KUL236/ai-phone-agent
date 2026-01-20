@@ -1,0 +1,52 @@
+NEXT STEPS TO PUSH TO GITHUB:
+=============================
+
+1. CREATE A GITHUB REPOSITORY
+   - Go to: https://github.com/new
+   - Repository name: ai-phone-agent
+   - Description: AI voice agent to control Android phone
+   - Choose: Public (so others can see it)
+   - Click "Create repository"
+
+2. COPY THE HTTPS URL
+   - After creating, GitHub shows you the URL
+   - It looks like: https://github.com/YOUR_USERNAME/ai-phone-agent.git
+   - Copy this URL
+
+3. RUN THESE COMMANDS IN POWERSHELL
+   (Replace the URL with your actual URL)
+
+cd "c:\Users\giris\OneDrive\Desktop\dsa programming\ai-phone-agent"
+
+git remote add origin https://github.com/YOUR_USERNAME/ai-phone-agent.git
+
+git branch -M main
+
+git push -u origin main
+
+4. ENTER YOUR GITHUB CREDENTIALS
+   - Username: your GitHub username
+   - Password: Your GitHub Personal Access Token (NOT your password!)
+
+HOW TO CREATE PERSONAL ACCESS TOKEN:
+====================================
+
+1. Go to: https://github.com/settings/tokens
+2. Click "Generate new token" (classic)
+3. Name it: ai-phone-agent
+4. Select scope: repo (full control)
+5. Click "Generate token"
+6. Copy the token (save it somewhere safe!)
+7. Use this token as your password when git asks
+
+That's it! Your project will be on GitHub! 🚀
+
+---
+
+FILES READY TO PUSH:
+- All 20 Python files
+- README.md (project documentation)
+- requirements.txt (dependencies)
+- .gitignore (ignore unnecessary files)
+
+Everything is committed and ready to go!
