@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Phone Agent - Web Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Phone Agent</h1>
+            <p>Control your Android phone from anywhere</p>
+            <div class="status" id="status">
+                <span class="indicator" id="indicator"></span>
+                <span id="statusText">Disconnected</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Connection Section -->
+            <section class="section">
+                <h2>Connection</h2>
+                <button class="btn btn-primary" id="connectBtn" onclick="connectPhone()">
+                    Connect Phone
+                </button>
+                <div id="connectionMsg" class="message"></div>
+            </section>
+
+            <!-- Command Input Section -->
+            <section class="section">
+                <h2>Send Command</h2>
+                <div class="input-group">
+                    <input type="text" id="commandInput" placeholder="Type a command... e.g., 'call mom'" class="input">
+                    <button class="btn btn-success" onclick="sendCommand()">Send</button>
+                </div>
+                <div id="commandMsg" class="message"></div>
+            </section>
+
+            <!-- Response Section -->
+            <section class="section" id="responseSection" style="display:none;">
+                <h2>Response</h2>
+                <div id="responseContent" class="response"></div>
+            </section>
+
+            <!-- Tasks Section -->
+            <section class="section">
+                <h2>Tasks</h2>
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Add new task..." class="input">
+                    <button class="btn btn-success" onclick="addTask()">Add Task</button>
+                </div>
+                <div id="tasksList" class="tasks-list"></div>
+            </section>
+
+            <!-- Examples Section -->
+            <section class="section">
+                <h2>Command Examples</h2>
+                <div id="examples" class="examples"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>AI Phone Agent &copy; 2026 | GitHub: <a href="https://github.com/KUL236/ai-phone-agent" target="_blank">KUL236</a></p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
